@@ -1,0 +1,23 @@
+services:
+
+# rebuild Caddy with x-caddy
+  caddy:
+    user: root
+    image: caddy # OPTIONAL can comment out if you want to rebuild/ update image on every launch
+    build:
+      context: . # PATH TO DOCKERFILE
+      dockerfile: Dockerfile # DOCKERFILE NAME
+    container_name: caddy
+    restart: unless-stopped
+    network_mode: host # Avoids SElinux bs on some distros so long as you remove privillege for ports 80 and 443
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:Z # Path to your caddyfile on host machine
+      - caddy_data:/root/.local/share/caddy:Z # persistent storage for your ssl certificates
+      - caddy_config:/root/.config/caddy:Z # persistent storage for your caddy configs
+    env_file:
+     - .env
+
+# volumes config section
+volumes:
+  caddy_data:
+  caddy_config:
