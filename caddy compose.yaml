@@ -11,7 +11,7 @@ services:
     restart: unless-stopped
     network_mode: host # Avoids SElinux bs on some distros so long as you remove privillege for ports 80 and 443
     volumes:
-      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:Z # Path to your caddyfile on host machine
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile:Z # Path to your caddyfile on host machine !! CHANGE THIS TO YOUR CADDYFILE PATH !!
       - caddy_data:/root/.local/share/caddy:Z # persistent storage for your ssl certificates !! DO NOT CHANGE !!
       - caddy_config:/root/.config/caddy:Z # persistent storage for your caddy configs !! DO NOT CHANGE !!
     env_file:
