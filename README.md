@@ -12,3 +12,5 @@ This is intended to simplify the caddy setup process IF you want caddy with mult
   - Add any api keys, secrets and passwords to the .env file
   - Run the compose file with podman-compose or docker compose!
   - Your caddy container with plugins will autostart with the contianer :D
+# Credit
+Credit to the Caddyserver contributors and ![mholt](https://github.com/mholt) for building great server tools like xcaddy and caddy!
