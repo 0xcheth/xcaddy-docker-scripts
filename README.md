@@ -13,4 +13,4 @@ This is intended to simplify the caddy setup process IF you want caddy with mult
 # Credit
 Credit to the Caddyserver contributors and ![mholt](https://github.com/mholt) for building great server tools like ![xcaddy](https://github.com/caddyserver/xcaddy) and ![caddy](https://github.com/caddyserver/caddy)!
 # AI use disclaimer
-GPT-5 is garbage and I cant afford claude, I had to actually read docs this time...
+GPT-5 is garbage and I cant afford claude, I had to actually read docs this time... Claude did most of this though.
